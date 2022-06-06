@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Владислав Кузьмин](https://up.htmlacademy.ru/javascript/26/user/2068507).
-* Наставник: [Максим Прусаков] (https://htmlacademy.ru/profile/hikikomori).
+* Наставник: [Максим Прусаков](https://htmlacademy.ru/profile/hikikomori).
 
 ---
 
