@@ -2,7 +2,7 @@
 
 * Студент: [Владислав Кузьмин](https://up.htmlacademy.ru/javascript/26/user/2068507).
 * Наставник: [Максим Прусаков](https://htmlacademy.ru/profile/hikikomori).
-
+     
 ---
 
 _Не удаляйте и не изменяйте самовольно файлы и папки:_
