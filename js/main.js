@@ -72,3 +72,5 @@ const generateObjects = (count) => {// массив на OBJESTS_TO_GEN элем
   }
   return objects;
 };
+
+generateObjects(OBJESTS_TO_GEN);
