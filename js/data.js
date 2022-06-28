@@ -1,4 +1,4 @@
-import {getRandomPositiveInteger} from './util.js';
+import {getRandomPositiveInteger, randValue} from './util.js';
 
 const NAMES_OF_COMMENTATORS = [
   'Данил',
@@ -23,11 +23,6 @@ const REPLIES_FOR_COMMENTS = [
   'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
 ];
-
-const randValue = (a) => {//рандомное значение из массива
-  const rand = Math.floor(Math.random()*a.length);
-  return a[rand];
-};
 
 const createComment = (id) => ({//делаем массив комментариев
   id,
