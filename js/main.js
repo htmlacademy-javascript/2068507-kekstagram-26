@@ -4,18 +4,51 @@ const OBJESTS_TO_GEN = 25;
 
 generateObjects(OBJESTS_TO_GEN);
 
+export {OBJESTS_TO_GEN};
 
-const createMiniature = document.querySelector('.picture');//нашли шаблон => взяли содержимое
-const templateMiniature = document.querySelector('#picture').content.querySelector('.picture');//получаем содержимое шаблона
 
-const simularImgFragment = document.createDocumentFragment();//фрагмент
+//полноэкранный режим
 
-const simularPicture = generateObjects(OBJESTS_TO_GEN);
-simularPicture.forEach((comments, likes, url) => {
-  const createCopyMiniature = templateMiniature.cloneNode(true);//делаем копию шаблона
-  createCopyMiniature.querySelector('.picture__comments').textContent = comments.length; //количество комментов
-  createCopyMiniature.querySelector('.picture__likes').textContent = likes.length;//количество лайков
-  createCopyMiniature.querySelector('.picture__img').src = url; //отрисовать миниатюры url в src
-  simularImgFragment.append(createCopyMiniature);//отправил во фрагмент
-});//вызвал функции => forEach аргументом коллбэка получил один из объектов с данными, из него взял информацию
-createMiniature.append(simularImgFragment);//подключил модуль
+
+/*const searchBigPicture = createMiniature;
+const createBigPictureFragment = document.createDocumentFragment();
+
+searchBigPicture.forEach(()=>{
+  const bigPicture = simularPicture;
+  if(bigPicture) {
+    createBigPictureFragment.append(bigPicture);
+  }
+});
+searchBigPicture.innerHTML = '';
+searchBigPicture.append(createBigPictureFragment);
+*/
+
+
+/* "нюансы заполнения шаблонов данными 7.11"
+Для отображения окна нужно удалять класс hidden у элемента .big-picture и каждый раз заполнять его данными о конкретной фотографии:
+
+Адрес изображения url подставьте как src изображения внутри блока .big-picture__img.
+
+Количество лайков likes подставьте как текстовое содержание элемента .likes-count.
+
+Количество комментариев comments подставьте как текстовое содержание элемента .comments-count.
+
+Список комментариев под фотографией: комментарии должны вставляться в блок .social__comments. Разметка каждого комментария должна выглядеть так:
+
+<li class="social__comment">
+    <img
+        class="social__picture"
+        src="{{аватар}}"
+        alt="{{имя комментатора}}"
+        width="35" height="35">
+    <p class="social__text">{{текст комментария}}</p>
+</li>
+Описание фотографии description вставьте строкой в блок .social__caption.
+
+После открытия окна спрячьте блоки счётчика комментариев .social__comment-count и загрузки новых комментариев .comments-loader, добавив им класс hidden, с ними мы разберёмся позже, в другом домашнем задании.
+
+После открытия окна добавьте тегу <body> класс modal-open, чтобы контейнер с фотографиями позади не прокручивался при скролле. При закрытии окна не забудьте удалить этот класс.
+
+Напишите код для закрытия окна по нажатию клавиши Esc и клике по иконке закрытия.
+
+Подключите модуль в проект.*/
