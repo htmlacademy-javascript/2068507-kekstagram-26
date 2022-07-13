@@ -55,4 +55,5 @@ const generateObjects = (count) => {// массив на OBJESTS_TO_GEN элем
   return objects;
 };
 
+
 export {generateObjects};
