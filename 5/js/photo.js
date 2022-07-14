@@ -21,17 +21,20 @@
 //   //После открытия окна спрячьте блоки счётчика комментариев .social__comment-count и загрузки новых комментариев .comments-loader, добавив им класс hidden, с ними мы разберёмся позже, в другом домашнем задании.
 
 //   const modalOpenBody = document.querySelector('body');
-//   modalOpenBody.classList.add('modal-open');
+//   modalOpenBody.classList.add('modal-open');//при открытом фото не прокручивается задний план
 
 //   const closePhotoButton = listPhoto.querySelector('.big-picture__cancel');
 
-//   closePhotoButton.addEventListener('click', function (){
-
-//   })
-
-//   document.addEventListener('keydown', function (evt) {
-//     if(evt.key === 27){} )
-
+//   const closeImg = () => {
+//     listPhoto.classList.add('hidden');//закрыть большое фото
+//   };
+//   closePhotoButton.addEventListener ('click', () => {
+//     closeImg();
+//   });
+//   closePhotoButton.addEventListener('keydown', (evt) => {
+//     if(evt.key === 27){
+//       closeImg();
+//     }});
 
 // };
 
