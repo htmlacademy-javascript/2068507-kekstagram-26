@@ -1,4 +1,5 @@
 import {getRandomPositiveInteger, randValue} from './util.js';
+const OBJESTS_TO_GEN = 25;
 
 const NAMES_OF_COMMENTATORS = [
   'Данил',
@@ -55,4 +56,6 @@ const generateObjects = (count) => {// массив на OBJESTS_TO_GEN элем
   return objects;
 };
 
-export {generateObjects};
+generateObjects(OBJESTS_TO_GEN);
+
+export {generateObjects, OBJESTS_TO_GEN};
