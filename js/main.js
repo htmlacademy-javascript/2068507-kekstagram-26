@@ -1,6 +1,7 @@
-import'./data.js';
+import './data.js';
 import './miniature.js';
 import './util.js';
+//import './view';
 
 //полноэкранный режим
 

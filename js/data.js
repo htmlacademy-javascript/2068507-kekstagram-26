@@ -56,6 +56,6 @@ const generateObjects = (count) => {// массив на OBJESTS_TO_GEN элем
   return objects;
 };
 
-generateObjects(OBJESTS_TO_GEN);
+const objectRandomUser = generateObjects(OBJESTS_TO_GEN);
 
-export {generateObjects, OBJESTS_TO_GEN};
+export {objectRandomUser};
