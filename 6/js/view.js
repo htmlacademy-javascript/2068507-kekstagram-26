@@ -25,16 +25,17 @@ const openbigPicture = ({comments, likes, url, description}) => {
   });
 };//функция открывает фото и загружает комментарии
 
-closeBigPhotoElement.addEventListener('click', (evt) => {
+const isEscape = (evt) => {
   evt.preventDefault();
   bigPicture.classList.add('hidden');
   document.querySelector('body').classList.remove('modal-open');
+};
+closeBigPhotoElement.addEventListener('click', (evt) => {
+  isEscape(evt);
 });
 document.addEventListener('keydown', (evt) => {
   if(evt.key === 'Escape'){
-    evt.preventDefault();
-    bigPicture.classList.add('hidden');
-    document.querySelector('body').classList.remove('modal-open');
+    isEscape(evt);
   }
 });
 //два обработчика на закрытие фото
