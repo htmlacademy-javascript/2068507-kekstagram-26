@@ -12,6 +12,8 @@ const randValue = (a) => {//рандомное значение из масси�
   return a[rand];
 };
 
+const isEscapeKey = (evt) =>
+  evt.key === 'Escape';
+
 export {getRandomPositiveInteger,
-  getRandom, maxLongComment, randValue
-};
+  getRandom, maxLongComment, randValue, isEscapeKey};
