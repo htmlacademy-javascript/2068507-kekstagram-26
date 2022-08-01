@@ -1,10 +1,20 @@
-
+//import {isEscapeKey} from './util.js';
 const bigPicture = document.querySelector('.big-picture');
-const closeBigPhotoElement = document.querySelector('.big-picture__cancel');//кнопка закрыьтя
+//const closeBigPhotoElement = document.querySelector('.big-picture__cancel');//кнопка закрыьтя
+
+// const onHiddenEsc = (evt) => {
+//   if(isEscapeKey(evt)) {
+//     evt.preventDefault();
+//     document.querySelector('body').classList.remove('modal-open');
+//   }
+// };
+// const closeBigPhoto = () => {
+//   bigPicture.classList.add('hidden');
+//   document.addEventListener('keydown', onHiddenEsc);
+// };
 
 const openbigPicture = ({comments, likes, url, description}) => {
   const bigPictureImg = bigPicture.querySelector('.big-picture__img');
-  bigPicture.classList.remove('hidden');
   bigPictureImg.querySelector('img').src = url; //путь к фото
   bigPicture.querySelector('.social__caption').textContent = description; //описание фото
   bigPicture.querySelector('.likes-count').textContent = likes;
@@ -23,21 +33,19 @@ const openbigPicture = ({comments, likes, url, description}) => {
   socialComment.querySelectorAll('.social__text').forEach((element, index) => {
     element.textContent = comments[index].comment;
   });
-};//функция открывает фото и загружает комментарии
-
-const isEscape = (evt) => {
-  evt.preventDefault();
-  bigPicture.classList.add('hidden');
-  document.querySelector('body').classList.remove('modal-open');
 };
-closeBigPhotoElement.addEventListener('click', (evt) => {
-  isEscape(evt);
-});
-document.addEventListener('keydown', (evt) => {
-  if(evt.key === 'Escape'){
-    isEscape(evt);
-  }
-});
-//два обработчика на закрытие фото
+//далее закрывашки
+
+// closeBigPhotoElement.addEventListener('click', () => {
+//   closeBigPhoto();
+// });
+// document.addEventListener('keydown', (evt) => {
+//   if(isEscapeKey(evt)){
+//     closeBigPhoto();
+//   }
+// });
+
+//функция открывает фото и загружает комментарии
+
 export {openbigPicture};
 
